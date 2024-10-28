@@ -3,6 +3,7 @@ include LICENSE
 include README.md
 include setup.py
 
-include specio/core/tests/data/*.*
-include specio/plugins/tests/data/*.*
-include specio/datasets/data/*.*
+# Exclude test data directories from distribution
+prune specio/core/tests/data
+prune specio/plugins/tests/data
+prune specio/datasets/data

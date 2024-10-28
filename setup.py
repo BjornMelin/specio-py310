@@ -12,6 +12,7 @@ data_dir = [os.path.join('specio', 'core', 'tests', 'data'),
             os.path.join('specio', 'plugins', 'tests', 'data'),
             os.path.join('specio', 'tests', 'data'),
             os.path.join('specio', 'datasets', 'data')]
+
 # recursively find the data
 data_files = [(d, [os.path.join(d, f) for f in files])
               for sub_dir in data_dir

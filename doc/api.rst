@@ -1,11 +1,11 @@
 ###################
-specio's user API
+specio_py310's user API
 ###################
 
 Spectra reader functions
 ========================
 
-These functions represent specio's main interface for the user. They provide a
+These functions represent specio_py310's main interface for the user. They provide a
 common API to read spectra data for a large variety of formats. All read
 functions accept keyword arguments, which are passed on to the format that does
 the actual work.  To see what keyword arguments are supported by a specific
@@ -15,7 +15,7 @@ Functions for reading:
 
   * :func:`.specread` - read a file with spectra from the specified uri
 
-For a larger degree of control, specio provides a function
+For a larger degree of control, specio_py310 provides a function
 :func:`.get_reader`. It returns an :class:`.Reader` object, which can be used
 to read data and meta data in a more controlled manner.  This also allows
 specific scientific formats to be exposed in a way that best suits that
@@ -28,10 +28,10 @@ Functions
    :toctree: generated/
    :template: function.rst
 
-   specio.help
-   specio.show_formats
-   specio.specread
-   specio.get_reader
+   specio_py310.help
+   specio_py310.show_formats
+   specio_py310.specread
+   specio_py310.get_reader
 
 Classes
 -------
@@ -40,13 +40,13 @@ Classes
    :toctree: generated/
    :template: class.rst
 
-   specio.core.format.Reader
+   specio_py310.core.format.Reader
 
 Core data structure
 ===================
 
-:func:`specio.specread` will return either a list of instances or an instance
-from the class :class:`specio.core.Spectrum`. This class is composed of three
+:func:`specio_py310.specread` will return either a list of instances or an instance
+from the class :class:`specio_py310.core.Spectrum`. This class is composed of three
 attributes:
 
 * a 1D ndarray of shape (n_wavelength,) or 2D ndarray of shape
@@ -62,43 +62,43 @@ For more information, you can check the full API documentation above.
    :toctree: generated/
    :template: class.rst
 
-   specio.core.Spectrum
+   specio_py310.core.Spectrum
 
 Command line interface
 ======================
 
-``specio`` provides a command line interface to make basic data manipulation.
+``specio_py310`` provides a command line interface to make basic data manipulation.
 
 Conversion to CSV
 -----------------
 
-Any format can be exported using the ``specio`` command line::
+Any format can be exported using the ``specio_py310`` command line::
 
-  specio convert input_file.spc output_file.csv
+  specio_py310 convert input_file.spc output_file.csv
 
 ``convert`` receive the input and output arguments. It is also possible to omit
 the output argument and an automatic output file will be generated depending of
 the input file name::
 
-  specio convert input_file.spc
+  specio_py310 convert input_file.spc
 
-As with :func:`specio.specread`, an input can get a name with a wildcard::
+As with :func:`specio_py310.specread`, an input can get a name with a wildcard::
 
-  specio convert "*.spc"
+  specio_py310 convert "*.spc"
 
 In addition, this is also possible to increase the tolerance to aggregate
-several spectra in the same CSV as in :func:`specio.specread`::
+several spectra in the same CSV as in :func:`specio_py310.specread`::
 
-  specio convert "*.spc" --tolerance 1e-2
+  specio_py310 convert "*.spc" --tolerance 1e-2
 
 Example datasets
 ================
 
-.. automodule:: specio.datasets
+.. automodule:: specio_py310.datasets
     :no-members:
     :no-inherited-members:
 
-.. currentmodule:: specio
+.. currentmodule:: specio_py310
 
 .. autosummary::
    :toctree: generated/

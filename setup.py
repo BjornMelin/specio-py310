@@ -3,15 +3,15 @@ import codecs
 from setuptools import setup, find_packages
 
 # get __version__ from _version.py
-ver_file = os.path.join('specio', '_version.py')
+ver_file = os.path.join('specio_py310', '_version.py')
 with open(ver_file) as f:
     exec(f.read())
 
 # get path of all data files used for testing
-data_dir = [os.path.join('specio', 'core', 'tests', 'data'),
-            os.path.join('specio', 'plugins', 'tests', 'data'),
-            os.path.join('specio', 'tests', 'data'),
-            os.path.join('specio', 'datasets', 'data')]
+data_dir = [os.path.join('specio_py310', 'core', 'tests', 'data'),
+            os.path.join('specio_py310', 'plugins', 'tests', 'data'),
+            os.path.join('specio_py310', 'tests', 'data'),
+            os.path.join('specio_py310', 'datasets', 'data')]
 
 # recursively find the data
 data_files = [(d, [os.path.join(d, f) for f in files])
@@ -35,7 +35,7 @@ CLASSIFIERS = ["Environment :: Console",
                'Programming Language :: Python :: 3.12',
                "Topic :: Scientific/Engineering"]
 
-description = "specio: Python input/output for spectroscopic files. A modified version of SpecIO for Python 3.10+ compatibility"
+description = "specio_py310: Python input/output for spectroscopic files. A modified version of SpecIO for Python 3.10+ compatibility"
 with codecs.open('README.rst', encoding='utf-8-sig') as f:
     long_description = f.read()
 
@@ -46,7 +46,7 @@ DESCRIPTION = description
 LONG_DESCRIPTION = long_description
 LONG_DESCRIPTION_CONTENT_TYPE='text/x-rst'
 URL = "https://github.com/BjornMelin/specio-py310"
-DOWNLOAD_URL = "https://github.com/BjornMelin/specio-py310/archive/refs/tags/0.1.0.post1.tar.gz"
+DOWNLOAD_URL = "https://github.com/BjornMelin/specio-py310/archive/refs/tags/0.1.0.post2.tar.gz"
 LICENSE = "BSD3"
 AUTHOR = "Guillaume Lemaitre"
 AUTHOR_EMAIL = "g.lemaitre58@gmail.com"
@@ -76,7 +76,7 @@ EXTRAS_REQUIRE = {
 
 ENTRY_POINTS = {
     'console_scripts': [
-        'specio=specio.cli:main'
+        'specio_py310=specio_py310.cli:main'
     ]
 }
 

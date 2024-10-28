@@ -3,4 +3,4 @@
 General examples
 ----------------
 
-General examples to introduce ``specio``.
+General examples to introduce ``specio_py310``.

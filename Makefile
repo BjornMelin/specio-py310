@@ -3,14 +3,14 @@
 # caution: testing won't work on windows
 
 test-code:
-	py.test specio
+	py.test specio_py310
 
 test-doc:
 	pytest  doc/*.rst
 
 test-coverage:
 	rm -rf coverage .coverage
-	py.test specio --cov-report term-missing --cov=specio
+	py.test specio_py310 --cov-report term-missing --cov=specio_py310
 
 test: test-code test-doc
 
@@ -30,5 +30,5 @@ clean:
 	rm -rf examples/.ipynb_checkpoints
 
 code-analysis:
-	flake8 specio | grep -v __init__ | grep -v external
-	pylint -E -i y specio/ -d E1103,E0611,E1101
+	flake8 specio_py310 | grep -v __init__ | grep -v external
+	pylint -E -i y specio_py310/ -d E1103,E0611,E1101

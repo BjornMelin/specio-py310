@@ -1,6 +1,6 @@
 """
 ==============================================
-Export a specio.Spectrum to a pandas.DataFrame
+Export a specio_py310.Spectrum to a pandas.DataFrame
 ==============================================
 
 This example illustrates how to export a spectrum into a dataframe which can be
@@ -13,8 +13,8 @@ useful for some later processing.
 
 import matplotlib.pyplot as plt
 
-from specio.datasets import load_csv_path
-from specio import specread
+from specio_py310.datasets import load_csv_path
+from specio_py310 import specread
 
 # read the spectrum
 spectra = specread(load_csv_path())

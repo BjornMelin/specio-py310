@@ -1,9 +1,9 @@
-""" Invoke various functionality for specio docs.
+""" Invoke various functionality for specio_py310 docs.
 """
 
 import os
 
-import specio
+import specio_py310
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 DOC_DIR = os.path.join(THIS_DIR, '..')
@@ -19,7 +19,7 @@ def setup(app):
 
 def init():
 
-    print('Special preparations for specio docs:')
+    print('Special preparations for specio_py310 docs:')
 
     for func in [prepare_reader_and_witer,
                  prepare_core_docs,
@@ -54,28 +54,28 @@ def prepare_reader_and_witer():
     # in the format module so that autoclass can find them. They need
     # to be new classes, otherwise sphinx considers them aliases.
     # We create the class using type() so that we can copy the __doc__.
-    Reader = type('Reader', (specio.core.format.Format.Reader, ),
-                  {'__doc__': specio.core.format.Format.Reader.__doc__})
+    Reader = type('Reader', (specio_py310.core.format.Format.Reader, ),
+                  {'__doc__': specio_py310.core.format.Format.Reader.__doc__})
 
-    specio.core.format.Reader = Reader
+    specio_py310.core.format.Reader = Reader
 
     # We set the docs of the original classes, and remove the original
     # classes so that Reader and Writer do not show up in the docs of
     # the Format class.
-    specio.core.format.Format.Reader = None  # .__doc__ = ''
+    specio_py310.core.format.Format.Reader = None  # .__doc__ = ''
 
 
 def prepare_core_docs():
-    """ Prepare specio.core for doc generation.
+    """ Prepare specio_py310.core for doc generation.
     """
-    # Set __all__ and add to __doc__ in specio.core module,
+    # Set __all__ and add to __doc__ in specio_py310.core module,
     # so that the documentation gets generated correctly.
 
-    D = specio.core.__dict__
+    D = specio_py310.core.__dict__
 
     excludes = 'binary_type', 'text_type'
 
-    # Collect functions and classes in specio.core
+    # Collect functions and classes in specio_py310.core
     functions, classes = [], []
     func_type = type(prepare_core_docs)
     for name in D:
@@ -109,15 +109,15 @@ def create_plugin_docs():
     """
 
     # Build main plugin dir
-    title = "Creating specio plugins"
+    title = "Creating specio_py310 plugins"
     text = '%s\n%s\n\n' % (title, '=' * len(title))
 
-    text += '.. automodule:: specio.plugins\n\n'
+    text += '.. automodule:: specio_py310.plugins\n\n'
 
     # Insert code from example plugin
     text += 'Example / template plugin\n-------------------------\n\n'
     text += ".. code-block:: python\n    :linenos:\n\n"
-    filename = specio.plugins.example.__file__.replace('.pyc', '.py')
+    filename = specio_py310.plugins.example.__file__.replace('.pyc', '.py')
     code = open(filename, 'rb').read().decode('utf-8')
     code = '\n'.join(['    ' + line.rstrip() for line in code.splitlines()])
     text += code
@@ -127,7 +127,7 @@ def create_plugin_docs():
 
 
 format_doc_text = """
-This page lists all formats currently supported by specio. Each format can
+This page lists all formats currently supported by specio_py310. Each format can
 support extra keyword arguments for reading and writing, which can be specified
 in the call to ``get_reader()``, ``specread()`` etc.  Further, formats are free
 to provide additional methods on their Reader object. These
@@ -141,7 +141,7 @@ def create_format_docs():
     """
 
     # Build main plugin dir
-    title = "Docs for specio formats"
+    title = "Docs for specio_py310 formats"
     text = '%s\n%s\n%s\n\n' % ('=' * len(title), title, '=' * len(title))
 
     text += format_doc_text
@@ -149,7 +149,7 @@ def create_format_docs():
     # Get bullet list of all formats
     ss = ['\n']
     subs = []
-    for format in specio.formats:
+    for format in specio_py310.formats:
         s = '  * :ref:`%s <%s>` - %s' % (format.name,
                                          format.name,
                                          format.description)
@@ -162,7 +162,7 @@ def create_format_docs():
     _write('formats.rst', text)
 
     # Get more docs for each format
-    for format in specio.formats:
+    for format in specio_py310.formats:
 
         title = '%s %s' % (format.name, format.description)
         ext = ', '.join(['``%s``' % e for e in format.extensions])

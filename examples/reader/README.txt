@@ -3,4 +3,4 @@
 Spectra reader
 --------------
 
-Illustrate the use of the different reader provided in ``specio``.
+Illustrate the use of the different reader provided in ``specio_py310``.

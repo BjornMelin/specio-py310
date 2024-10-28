@@ -55,4 +55,4 @@ install:
 test_script:
   - mkdir for_test
   - cd for_test
-  - pytest --pyargs specio --cov-report term-missing --cov=specio
+  - pytest --pyargs specio_py310 --cov-report term-missing --cov=specio_py310

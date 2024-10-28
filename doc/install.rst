@@ -27,18 +27,18 @@ You can install the dependencies via pip::
 
 You can install the package using pip and the PyPi repository::
 
-  pip install -U specio
+  pip install -U specio-py310
 
 Alternatively, you can clone it and run the setup.py file. Use the following
 commands to get a copy from Github and install::
 
-  git clone https://github.com/paris-saclay-cds/specio.git
-  cd specio
+  git clone https://github.com/BjornMelin/specio-py310.git
+  cd specio-py310
   pip install .
 
 You can also install the master branch directly with pip::
 
-  pip install git+https://github.com/paris-saclay-cds/specio.git
+  pip install git+https://github.com/BjornMelin/specio-py310.git
 
 Test and coverage
 =================
@@ -60,4 +60,4 @@ You can contribute to this code through Pull Request on GitHub_. Please, make
 sure that your code is coming with unit tests to ensure full coverage and
 continuous integration in the API.
 
-.. _GitHub: https://github.com/paris-saclay-cds/specio/pulls
+.. _GitHub: https://github.com/BjornMelin/specio-py310/pulls

@@ -13,6 +13,12 @@ matrix:
     - env: PYTHON_VERSION="2.7"
     - env: PYTHON_VERSION="3.5"
     - env: PYTHON_VERSION="3.6"
+    - env: PYTHON_VERSION="3.7"
+    - env: PYTHON_VERSION="3.8"
+    - env: PYTHON_VERSION="3.9"
+    - env: PYTHON_VERSION="3.10"
+    - env: PYTHON_VERSION="3.11"
+    - env: PYTHON_VERSION="3.12"
 
 install: source build_tools/travis/install.sh
 

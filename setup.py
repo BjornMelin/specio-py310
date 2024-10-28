@@ -26,18 +26,24 @@ CLASSIFIERS = ["Environment :: Console",
                'Programming Language :: Python :: 2.7',
                'Programming Language :: Python :: 3.5',
                'Programming Language :: Python :: 3.6',
+               'Programming Language :: Python :: 3.7',
+               'Programming Language :: Python :: 3.8',
+               'Programming Language :: Python :: 3.9',
+               'Programming Language :: Python :: 3.10',
+               'Programming Language :: Python :: 3.11',
+               'Programming Language :: Python :: 3.12',
                "Topic :: Scientific/Engineering"]
 
 description = "specio: Python input/output for spectroscopic files."
 with codecs.open('README.rst', encoding='utf-8-sig') as f:
     long_description = f.read()
 
-NAME = "specio"
-MAINTAINER = "Guillaume Lemaitre"
-MAINTAINER_EMAIL = "glemaitre58@gmail.com"
+NAME = "specio-py310"
+MAINTAINER = "Bjorn Melin"
+MAINTAINER_EMAIL = "bjornmelin16@gmail.com"
 DESCRIPTION = description
 LONG_DESCRIPTION = long_description
-URL = "https://github.com/paris-saclay-cds/specio"
+URL = "https://github.com/BjornMelin/specio-py310"
 DOWNLOAD_URL = ""
 LICENSE = "BSD3"
 AUTHOR = "Guillaume Lemaitre"

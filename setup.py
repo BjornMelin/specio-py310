@@ -34,7 +34,7 @@ CLASSIFIERS = ["Environment :: Console",
                'Programming Language :: Python :: 3.12',
                "Topic :: Scientific/Engineering"]
 
-description = "specio: Python input/output for spectroscopic files."
+description = "specio: Python input/output for spectroscopic files. A modified version of SpecIO for Python 3.10+ compatibility"
 with codecs.open('README.rst', encoding='utf-8-sig') as f:
     long_description = f.read()
 
@@ -51,24 +51,31 @@ AUTHOR_EMAIL = "g.lemaitre58@gmail.com"
 PLATFORMS = "OS Independent"
 VERSION = __version__
 DATA_FILES = data_files
-INSTALL_REQUIRES = ['numpy', 'six']
+
+INSTALL_REQUIRES = [
+    'numpy>=1.20',  # Adjust version if needed for Python 3.10+
+    'six'
+]
+
 EXTRAS_REQUIRE = {
     'tests': [
-        'pytest',
+        'pytest>=6.0',  # Updated to ensure compatibility with Python 3.10+
         'pytest-cov',
-        'pytest-mock'],
+        'pytest-mock'
+    ],
     'docs': [
-        'sphinx',
+        'sphinx>=4.0',
         'sphinx-gallery',
         'sphinx_rtd_theme',
         'numpydoc',
-        'matplotlib',
+        'matplotlib'
     ]
 }
 
 ENTRY_POINTS = {
     'console_scripts': [
-        'specio=specio.cli:main']
+        'specio=specio.cli:main'
+    ]
 }
 
 

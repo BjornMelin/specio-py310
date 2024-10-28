@@ -1,9 +1,9 @@
-.. specio documentation master file, created by
+.. specio_py310 documentation master file, created by
    sphinx-quickstart on Mon Jul 17 13:33:12 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to specio's documentation!
+Welcome to specio_py310's documentation!
 ==================================
 
 .. toctree::
@@ -28,7 +28,7 @@ Welcome to specio's documentation!
 
    auto_examples/index
 
-Specio is a Python library that provides an easy interface to read hypersectral
+specio_py310 is a Python library that provides an easy interface to read hypersectral
 data. It is cross-platform, runs on Python 2.x and 3.x, and is easy to
 install. This package is heavily inspired from the imageio:
 http://imageio.github.io

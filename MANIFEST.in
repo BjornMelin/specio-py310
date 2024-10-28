@@ -4,6 +4,6 @@ include README.md
 include setup.py
 
 # Exclude test data directories from distribution
-prune specio/core/tests/data
-prune specio/plugins/tests/data
-prune specio/datasets/data
+prune specio_py310/core/tests/data
+prune specio_py310/plugins/tests/data
+prune specio_py310/datasets/data

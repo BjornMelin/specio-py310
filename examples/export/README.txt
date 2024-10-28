@@ -3,4 +3,4 @@
 Exporting spectra
 -----------------
 
-Illustrate the way to export the spectrum using ``specio``.
+Illustrate the way to export the spectrum using ``specio_py310``.

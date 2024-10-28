@@ -3,7 +3,7 @@
 General presentation of the Spectrum data structure
 ===================================================
 
-This example illustrates how to create and use the ``specio.core.Spectrum``
+This example illustrates how to create and use the ``specio_py310.core.Spectrum``
 data structure.
 
 """
@@ -15,9 +15,9 @@ from __future__ import print_function
 
 import numpy as np
 
-from specio import specread
-from specio.core import Spectrum
-from specio.datasets import load_spc_path
+from specio_py310 import specread
+from specio_py310.core import Spectrum
+from specio_py310.datasets import load_spc_path
 
 print(__doc__)
 
@@ -43,7 +43,7 @@ spectra = Spectrum(amplitude, wavelength, metadata)
 print('The spectrum created has the representation: \n{}'.format(spectra))
 
 ###############################################################################
-# The ``Spectrum`` instances are returned when using `specio.specread`. We give
+# The ``Spectrum`` instances are returned when using `specio_py310.specread`. We give
 # a quick example to illustrate this case.
 
 spc_filename = load_spc_path()

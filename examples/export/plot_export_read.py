@@ -5,7 +5,7 @@ Read proprietary format and export to CSV
 
 This example illustrates how to read some proprietary format and export the
 resulting spectrum into an internal CSV format. The exported CSV can also be
-read using :func:`specio.specread`.
+read using :func:`specio_py310.specread`.
 
 """
 
@@ -19,7 +19,7 @@ import sys
 
 import matplotlib.pyplot as plt
 
-from specio import specread
+from specio_py310 import specread
 
 print(__doc__)
 

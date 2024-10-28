@@ -14,8 +14,8 @@ from __future__ import print_function
 
 import matplotlib.pyplot as plt
 
-from specio import specread
-from specio.datasets import load_fsm_path
+from specio_py310 import specread
+from specio_py310.datasets import load_fsm_path
 
 print(__doc__)
 

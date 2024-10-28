@@ -18,7 +18,7 @@ import sys
 
 import matplotlib.pyplot as plt
 
-from specio import specread
+from specio_py310 import specread
 
 print(__doc__)
 

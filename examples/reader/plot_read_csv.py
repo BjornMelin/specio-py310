@@ -4,7 +4,7 @@ Read CSV Comma-separated values format
 ======================================
 
 This example shows how to read CSV file and plot the results. Note that this
-format is the format used when using :func:`specio.core.Spectrum.to_csv`
+format is the format used when using :func:`specio_py310.core.Spectrum.to_csv`
 
 """
 
@@ -15,8 +15,8 @@ from __future__ import print_function
 
 import matplotlib.pyplot as plt
 
-from specio import specread
-from specio.datasets import load_csv_path
+from specio_py310 import specread
+from specio_py310.datasets import load_csv_path
 
 print(__doc__)
 

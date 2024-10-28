@@ -23,7 +23,7 @@ matrix:
 install: source build_tools/travis/install.sh
 
 script:
-  - pytest -lv --cov-report term-missing specio --cov=specio
+  - pytest -lv --cov-report term-missing specio_py310 --cov=specio_py310
 
 after_success:
   - codecov
